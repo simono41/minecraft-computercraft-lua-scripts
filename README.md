@@ -7,6 +7,40 @@ Dieses Repository enthält Lua-Skripte für die Verwendung mit Computercraft, ei
 - Minecraft mit Computercraft-Mod installiert
 - Computercraft-Computer oder -Turtles im Spiel
 
+## Skripte herunterladen
+
+### Über Pastebin
+1. Öffne das Computercraft-Computerprogramm oder die Turtle im Spiel.
+2. Führe den folgenden Befehl aus, um das Skript von Pastebin herunterzuladen:
+
+   ```lua
+   pastebin get PASTE_CODE FILE_NAME
+   ```
+
+   Ersetze `PASTE_CODE` durch den Pastebin-Code des Skripts und `FILE_NAME` durch den gewünschten Dateinamen.
+
+### Über HTTP (mit `http`-API)
+1. Öffne das Computercraft-Computerprogramm oder die Turtle im Spiel.
+2. Führe den folgenden Befehl aus, um das Skript von einem HTTP-Server herunterzuladen:
+
+   ```lua
+   local url = „SCRIPT_URL“
+   local response = http.get(url)
+   
+   if response then
+     local content = response.readAll()
+     response.close()
+     
+     local file = fs.open(„FILE_NAME“, „w“)
+     file.write(content)
+     file.close()
+   else
+     print(„Fehler beim Herunterladen des Skripts.“)
+   end
+   ```
+
+   Ersetze `SCRIPT_URL` durch die URL des Skripts und `FILE_NAME` durch den gewünschten Dateinamen.
+
 ## Verwendung
 1. Lade die Lua-Skripte herunter oder klonen Sie dieses Repository.
 2. Kopiere die Skripte auf den Computer oder die Turtle im Spiel.
@@ -16,13 +50,13 @@ Dieses Repository enthält Lua-Skripte für die Verwendung mit Computercraft, ei
 - **autoFarm.lua**: Automatisiert den Ernteprozess für landwirtschaftliche Betriebe.
   
 ```lua
--- Beispielcode oder Anleitung hier einfügen
+— Beispielcode oder Anleitung hier einfügen
 ```
 
 - **miningTurtle.lua**: Programm für eine Turtle, um automatisch Ressourcen abzubauen.
 
 ```lua
--- Beispielcode oder Anleitung hier einfügen
+— Beispielcode oder Anleitung hier einfügen
 ```
 
 ## Beitrag
