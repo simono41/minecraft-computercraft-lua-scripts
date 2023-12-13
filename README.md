@@ -19,6 +19,16 @@ Dieses Repository enthält Lua-Skripte für die Verwendung mit Computercraft, ei
 
    Ersetze `PASTE_CODE` durch den Pastebin-Code des Skripts und `FILE_NAME` durch den gewünschten Dateinamen.
 
+### Über HTTP (mit wget-ähnlichem Befehl)
+1.	Öffne das Computercraft-Computerprogramm oder die Turtle im Spiel.
+2.	Führe den folgenden Befehl aus, um das Skript von einem HTTP-Server herunterzuladen:
+
+   ```lua
+   shell.run(„wget SCRIPT_URL FILE_NAME“)
+   ```
+
+2.	Ersetze SCRIPT_URL durch die URL des Skripts und FILE_NAME durch den gewünschten Dateinamen.
+
 ### Über HTTP (mit `http`-API)
 1. Öffne das Computercraft-Computerprogramm oder die Turtle im Spiel.
 2. Führe den folgenden Befehl aus, um das Skript von einem HTTP-Server herunterzuladen:
